@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    enum CardType { Spade, Jack, Heart, Diamond}
-    class Card
+    public enum CardType { Spade, Jack, Heart, Diamond}
+
+    public class Card
     {
         public CardType Type { get; }
         public int Value { get; }
@@ -16,6 +17,11 @@ namespace BlackJack
         {
             Value = value;
             Type = type;
+        }
+
+        public override string ToString()
+        {
+            return $"Value: {Value}, Type: {Type}";
         }
     }
 }
