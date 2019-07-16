@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    enum cardType { Spade, }
+    enum CardType { Spade, Jack, Heart, Diamond}
     class Card
     {
-        private cards = [];
-        public Card()
+        public CardType Type { get; }
+        public int Value { get; }
+
+        public Card(int value, CardType type)
         {
-
-        }
-
-        public InitializeNewGame()
-        {
-
+            Value = value;
+            Type = type;
         }
     }
 }

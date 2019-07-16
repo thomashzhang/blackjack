@@ -8,15 +8,15 @@ namespace BlackJack
 {
     class Hand
     {
-        private cards = [];
+        private Deck deck;
+        private List<Card> playerCards;
+        private List<Card> dealerCards;
         public Hand()
         {
-
-        }
-
-        public InitializeNewGame()
-        {
-
+            deck = new Deck();
+            playerCards = deck.GetCard(2);
+            dealerCards = new List<Card>();
+            dealerCards.Add(deck.GetCard());
         }
     }
 }
